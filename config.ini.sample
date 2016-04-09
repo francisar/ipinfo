@@ -1,5 +1,6 @@
 [logging]
-log_path = log.log
+log_file = ipinfo.log
+log_path = /data/logs/ipinfo
 log_level = debug
 log_when = D
 log_rotating_interval = 1

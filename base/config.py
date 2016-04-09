@@ -5,6 +5,7 @@ from function import Config
 
 
 cf = Config()
+LOG_FILE = cf.get('logging','log_file')
 
 LOG_PATH = cf.get('logging','log_path')
 LOG_LEVEL = cf.get('logging','log_level')
