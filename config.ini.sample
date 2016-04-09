@@ -1,0 +1,16 @@
+[logging]
+log_path = log.log
+log_level = debug
+log_when = D
+log_rotating_interval = 1
+log_backupCount = 7
+log_queuelen = 1000
+
+
+[db]
+host = 
+port = 
+user = 
+passwd = 
+dbname = 
+
