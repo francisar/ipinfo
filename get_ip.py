@@ -4,6 +4,7 @@
 from base.ipinfooperate import IpinfoOperater
 from base.function import *
 from base.config import *
+from base.baselog import BaseLog
 import time
 
 globalLog=BaseLog(LOG_LEVEL,LOG_PATH,LOG_FILE,LOG_WHEN,LOG_BACKUPCOUNT,LOG_ROTATING_INTERVAL)
