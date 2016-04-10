@@ -16,7 +16,7 @@ LOG_QUEUELEN = cf.get('logging','log_queuelen')
 
 
 DBHOST =  cf.get('db','host')
-DBPORT = cf.get('db','port')
+DBPORT = eval(cf.get('db','port'))
 DBUSER = cf.get('db','user')
 DBPASSWD = cf.get('db','passwd')
 DBNAME = cf.get('db','dbname')
