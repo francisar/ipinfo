@@ -57,7 +57,7 @@ class BaseLog(object):
             sys.stderr.write('User does not have '\
             'modify permissions, msg:%s\n'%msg)
 
-    def writelog(self,log_level,message):
+    def write(self,log_level,message):
         for case in switch(log_level.strip().lower()):
             if case('warn'):
                 self.warn(message)
