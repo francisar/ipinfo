@@ -41,7 +41,6 @@ class IpinfoApi(object):
         uri = "%s%s?ip=%s" % (self.__ip,url_path,ip)
         try:
             request = requests.get(uri,
-                    data=json.dumps(params),
                     headers={"Content-Type" : \
                     "application/json", "Accept" : "application/json"}, timeout=10)
             self.__logger.write("debug","url:%s,status:%d"%(uri,request.status_code))
