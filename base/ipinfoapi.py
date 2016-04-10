@@ -32,13 +32,13 @@ class IpinfoApi(object):
         self.__ip = iplist
         self.__logger = logger
 
-    def call(self,  params, url_path='/service/getIpInfo.php', method='get'):
+    def call(self,  ip, url_path='/service/getIpInfo.php', method='get'):
         '''
         调用接口，并将数据格式转化成json
         只需要传入pf, openid, openkey等参数即可，不需要传入sig
         format即使传xml也没有用，会被强制改为json
         '''
-        uri = "%s%s" % (self.__ip,url_path)
+        uri = "%s%s?ip=%s" % (self.__ip,url_path,ip)
         try:
             request = requests.get(uri,
                     data=json.dumps(params),
@@ -54,7 +54,7 @@ class IpinfoApi(object):
 
 
     def getipinfo(self, ip):
-        jdata = self.call({'ip': ip})
+        jdata = self.call(ip)
         return jdata
 
 
