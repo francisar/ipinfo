@@ -27,7 +27,7 @@ import requests
 
 class IpinfoApi(object):
 
-    def __init__(self,logger,iplist='ip.taobao.com'):
+    def __init__(self,logger,iplist='http://ip.taobao.com'):
         super(IpinfoApi, self).__init__()
         self.__ip = iplist
         self.__logger = logger
