@@ -45,7 +45,8 @@ class IpinfoApi(object):
                     "application/json", "Accept" : "application/json"}, timeout=10)
             self.__logger.write("debug","url:%s,status:%d"%(uri,request.status_code))
             if request.status_code <> 200:
-                self.__logger.write("error","connect url %s faild %d,params:%s"%(uri,request.status_code,str(params)))
+                self.__logger.write("error","connect url %s faild %d,params:%s"%(uri,request.status_code,ip))
+                return {}
             return json.loads(request.content)
         except (requests.exceptions.ConnectionError, requests.exceptions.Timeout), msg:
             self.__logger.write("error","URLERROR-%s,params:%s"%(msg,str(params)))
