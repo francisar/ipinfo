@@ -49,7 +49,7 @@ class IpinfoApi(object):
                 return {}
             return json.loads(request.content)
         except (requests.exceptions.ConnectionError, requests.exceptions.Timeout), msg:
-            self.__logger.write("error","URLERROR-%s,params:%s"%(msg,str(params)))
+            self.__logger.write("error","URLERROR-%s,params:%s"%(msg,str(ip)))
             return {}
 
 
